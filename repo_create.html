@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Geoff's Intro to GitHub</title>
+</head>
+
+<div class="container">
+
+<div class="text-center">
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">Basics</a></li>
+    <li role="presentation"class="active"><a href="#">Repository: Creation</a></li>
+    <li role="presentation"><a href="#">Repository: Contribution</a></li>
+    <li role="presentation"><a href="#">Learning Resources</a></li>
+  </ul>
+  </div>
+
+  <div class="page-header">
+     <h1>Setting Up Your Repo</h1>
+  </div>
+
+     <h3> Creating The Repository </h3>
+     <p> Go to github.com and make an account, it's free! Once thats done and your at the homepage, on the left theres a "Your Repositories" box and inside it is a big green button that says "New Repository." Go ahead and click that. 
+      </br> </p>
+      <p>
+      On the next page, give your repository a name; It should be the name of your project or something similar. Choose weather to set it to private or public and don't worry about making readme right now. Go ahead and create the new repo. 
+      </p>
+
+      <h3> Your Local Repository </h3>
+      <p> Now that your repository is setup, it's time now get your local project directory ready to be paired to the online project repository. If you have a project folder already created, good, just make sure it's somewhere easily acessable. If not, create a new folder on your desktop called "git" and inside that one, create a another folder. For the puropses of this demo, just call it "README". Inside your test folder, just create a new .txt file. I'll be using this websites project folder and files.</p> 
+
+      <p> If you haven't already, read the Basics section of this site before you continue so you can get familiar with some of the commands. Now it's time to use the command line. To start the link between your computer and git, you have to let git know who your are first. In the console, type: </p>
+
+      <div class="well well-sm">
+       <p> <kbd>git config --global user.name</kbd> "username"</p>
+      </div>
+      
+
+      <p> Replace "username" with whatever username you just created or already have. Do the same with your email like this:</p>
+
+      <div class="well well-sm">
+        <p><kbd>git config --global user.email</kbd> "user@mail.com"</p>
+      </div>
+
+      <img class="img-responsive" src="images/git_1.png" alt="git" width=" 75%"> 
+
+      </br>
+      </br>
+
+      <p> Now for a little navigation, we need be inside the project folder we want to link with our git repo. Hopefully your project is in a easy to reach place. For me, it will be like this:  </p>
+
+      <div class="well well-sm">
+        <kbd>cd desktop
+        <br>
+        cd git
+        <br>
+        cd git_intro </kbd>
+      </div>
+
+      <p> The command <kbd>cd</kbd> means what it does, changes directory. For me, my project lives indide a folder called "git" on my desktop, for easy navigation. </p> 
+
+      <br>
+
+      <p> So here we are inside our folder, but git doesn't know about it yet. To get git talking with our project, we need to initalize communication. We know it's a git command because it starts with <kbd>git</kbd> So we go:  </p>
+
+      <div class="well well-sm">
+        <kbd> git init </kbd>
+      </div>
+
+      <br>
+
+      <p> So heres what we just did. My directory has alreay been initialized, but yours should say <kbd>Initalized empty git repository in</kbd> wherever your directory is.  </p>
+
+      <br>
+
+      <img class="img-responsive" src="images/2.png" alt="git" width=" 75%"> 
+
+      <br> 
+
+      <p> Nice! Now we can start adding the contents of the folder to our github repository. To see what's in our folder, and the status of our files, we can use the <kbd>git status</kbd> command. </p>
+      
+      <p> It shoudl say your are in your master branch, which is where we want to be. It will also say stuff about Untracked files and be pointing to your text.txt file. This is all fine. Git knows what is, and what isnt, inside the repo and knows that changes have not been made thus far. </p>
+
+      <p>We want to make git notice that file, we should go ahead and add that .txt file. Go ahead and do:</p>
+
+      <div class="well well-sm">
+        <kbd>git add README.txt</kbd> 
+      </div>
+
+      <p> The second step is to commit the file, the checkpoint in the version control system. Type: </p>
+
+      <div class="well well-sm">
+        <kbd>git commit -m "your message"</kbd>
+      </div>
+
+      <p>Its good practice to always include a short message with your commits, to tell other people and yourself what changes have been made incase of a conflict or errors.</p>
+      <br>
+
+      <img class="img-responsive" src="images/git_3.png" alt="git" width=" 75%"> 
+      
+      <br>
+
+      <h3>Connecting the Repos</h3>
+
+      <p>To this point, we have two repos; local, and github. We need to tell git that we are going to be pushing this local repo up into our github repo, but it needs to know where. </p>
+      <p>If you go back into your repository on the github website, there will be a coppyable https link at the top. Grab that and go back into terminal to type then paste your link: </p>
+
+      <div class="well well-sm">
+        <kbd>git remote add origin https://github.com/geofflightbourn/git_intro.git</kbd>
+      </div>
+
+      <br>
+
+      <p> Using <kbd>git remote -v</kbd> will let you know all the origins (origina locations of files) your github repo knows about. Right now, we only have one, the repo we just connected to moments ago. </p>
+
+      <p>So now, all thats left to do is push our files from our local repository, up into the online repository on github. So we just do:</p>
+
+      <div class="well well-sm">
+        <kbd>git push origin master</kbd> 
+      </div>
+
+      <p>We do this to specify that we are push up into our master branch, our only branch.</p>
+
+      <br>
+
+      <img class="img-responsive" src="images/git_4.png" alt="git" width=" 75%"> 
+      
+      <br>
+
+      <p>Done! If you go check your github repo you should see the file we just added. Congrats! </p>
+
+<br>
+<br>
+<br>
+</div> <!-- End Container -->
+
+<footer class="footer">
+     <div class="FooterContainer">
+       <p class="text-muted">Geoffrey Lightbourn - 2015</p>
+     </div>
+   </footer>
+  
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
