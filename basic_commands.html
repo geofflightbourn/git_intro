@@ -13,26 +13,83 @@
 
 <div class="text-center">
   <ul class="nav nav-pills">
-    <li role="presentation"><a href="#">Home</a></li>
+    <li role="presentation"><a href="index.html">Home</a></li>
     <li role="presentation" class="active" ><a href="#">Basics</a></li>
-    <li role="presentation"><a href="#">Repository: Creation</a></li>
-    <li role="presentation"><a href="#">Repository: Contribution</a></li>
-    <li role="presentation"><a href="#">Learning Resources</a></li>
+    <li role="presentation"><a href="repo_contrib.html">Repository: Creation</a></li>
+    <li role="presentation"><a href="repo_create.html">Repository: Contribution</a></li>
+    <li role="presentation"><a href="resources.html">Learning Resources</a></li>
   </ul>
   </div>
 
   <div class="page-header">
-     <h1>Basic Commands</h1>
+     <h1>Basics</h1>
   </div>
 
-     <h3>Find your working directory</h3>
-     <p>Note the lack of the <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>, which disables the zooming aspect of sites in mobile devices. In addition, we reset our container's width and changed the navbar to prevent collapsing, and are basically good to go.</p>
+     <h3>Before You Start</h3>
+     
+     <p>If you haven't already, create a github account, it's free! </p>
+
+     <p> While github has made a downloadable GUI program to do all this stuff in, we are going to use the command line. Ill be using the terminal in OS X, but git will work with Windows too. Go to the git website and <a href="http://git-scm.com/downloads"><strong>Download</strong></a> it.</p>
+
+     <br>
+
+     <h3>Terminology</h3>
+
+     <h4><ul>Repository</ul></h4>
+      
+      <p>A Repository or “Repo” is the space in Github where your project will live. The main project files are under the “Master” branch in the repo. When others contribute to the project, the will “branch” off of, making changes under their own branch. When finished, they “merge” there changes into the master. </p>
+
+      <h4><ul>Version Control</ul></h4>
+      
+      <p> Version control is the general purpose of Github. Instead of having multiple saves, or overwriting a bunch of times, Github will remember what was changed or added so you never have to worry about losing work if a mistake was made. 
+      </p>
+
+      <h4><ul>Commit</ul></h4>
+
+      <p> The commit function is version control in action. When you commit work to your repo, Github will remember what changes you have made, like a checkpoint of your repo. Like in a video game, if you reach a checkpoint, but die 2 minutes later, you can always revert back without having to restart the entire game or pick up from an old save file, loosing all your items and progress. Same premise applies here. 
+      </p>
+
+       <br>
+
+       <h3>Commands</h3>
+
+       <h4><ul>Navigation</ul></h4>
+       <p><kbd>cd</kbd> - Change directory</p>
+       <p><kbd>cd ..</kbd> - Go back one directory</p>
+
+       <br>
+
+       <h4><ul>Setting Up</ul></h4>
+       <p><kbd>git help</kbd> - This will show you the most common git fuctions incase you forget</p>
+       <p><kbd>git config</kbd> - Use for first time setups, but not needed for this tutorial</p>
+       <p><kbd>git init</kbd> - Turns an ordinary folder directory into into a Git ready state. </p>
+
+       <br>
+
+       <h4><ul>Working With Your Repo</ul></h4>
+       <p><kbd>git status</kbd> - Will see the status of everything within that git ready local directory</p>
+       <p><kbd>git add</kbd> - This is the first step of making changes. It does not add the file to the repo, just brings it to Git’s attention and is part of the checkpoint process</p> 
+       <p><kbd>git remote -v</kbd> - Checks the where repos are being pushed, origins and streams</p>
+       <p><kbd>git commit</kbd> - An important command. It initializes the checkpoint phase of your repo after you make changes. It’s generally to leave a message on every commit so yourself and others know what you did so use its like this: git commit -m “ Type your message here”. The -m indicates that this part of the command will be read as a message</p>
+       <p><kbd>git push</kbd> - If you are working locally and want your changes to be made visible on Github, use this command to “push” the changes up into the repository</p>
+       <p><kbd>git checkout</kbd> - This is a navigational command that lets you see inside of other repos or branches that you are not currently inside. You can use it like so: git checkout master or 
+      git checkout branch corn to look at another branch</p>
+      <p><kbd>git branch</kbd> - Use this command when working with others on a project. You can make your own changes and will show you a timeline of commits just incase something goes wrong. Use it like: git branch corn - where corn is the name of the branch you are creating</p>
+      <p><kbd>git pull</kbd> - When you want the most up-to-date version of your collaborative repo, you “pull” the changes people made down from Github to your local folder</p>
+      <p><kbd>git clone</kbd> - Makes a copy of selected repository into your local directory</p>
+
+
 
 </div> <!-- End Container -->
 
+<br>
+<br>
+<br>
+
 <footer class="footer">
-     <div class="FooterContainer">
-       <p class="text-muted"> "Geoffrey Lightbourn - 2015</p>
+     <div class="container">
+       <p class="text-muted">Geoffrey Lightbourn - 2015</p>
+       <p><a href="https://github.com/geofflightbourn">Fork Me On Github</a></p>
      </div>
    </footer>
   

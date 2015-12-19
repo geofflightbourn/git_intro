@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Geoff's Intro to GitHub</title>
+</head>
+
+<div class="container">
+
+<div class="text-center">
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="index.html">Home</a></li>
+    <li role="presentation"><a href="basic_commands.html">Basics</a></li>
+    <li role="presentation"><a href="repo_create.html">Repository: Creation</a></li>
+    <li role="presentation"  class="active" ><a href="#">Repository: Contribution</a></li>
+    <li role="presentation"><a href="resources.html">Learning Resources</a></li>
+  </ul>
+  </div>
+
+  <div class="page-header">
+     <h1>Contributing To A Repository</h1>
+  </div>
+
+     <h3>Forking</h3>
+     <p> Forking a repository is a way to experiment and make changes to someone elses work without affecting the repository directly. Forking makes a copy of the repository for you to make changes locally. It can be used as a starting point for one of your own projects, or to fix bugs and errors.  </p>
+     <p> If you want the owner to see your changes, you then submit a pull request which will allow them to add your changes to the project. Contributing to projects like this is the very soul of what open source truely is. </p>
+
+     <br>
+
+     <h4> Time to Fork! </h4>
+
+     <p> To keep it simple, we are going to use the practice repo github has kindly setup for us. It's called octocat/Spoon-Knife available 
+     <a href="https://github.com/octocat/Spoon-Knife"><strong>here</strong></a>.</p> 
+
+     <p> In the top right corner, click "Fork" and put it into your github account. It will redirect you to "youraccountname/Spoon-Knife" which is where we want to be. It's now your own personal copy to do with whatever you want. </p> 
+     <p> Now we're going bring it down to our local directory. If you are still in the working directory form the previous lesson, you can type
+     <kbd>cd ..</kbd> to go back out one step of your current directory. When we clone our fork, its going to create a folder with everything in it. </p>
+      <p>So lets go ahead and do that. In top bar of the forked repo under your account, copy the https url. Then do:</p>
+
+      <br>
+
+    <div class="well well-sm">
+      <p><kbd>git clone</kbd> paste in the url here </p> 
+    </div>
+
+    <br>
+
+    <p>You should see:</p>
+
+    <img class="img-responsive" src="images/git_5.png" alt="git" width=" 75%"> 
+
+    <br>
+
+    <p>And there you go, all the project files to start working with!</p>
+
+    <br>
+
+    <h3>Going Upstream</h3>
+
+    <p>This step is optional, but very useful if you intend on working alongside the project owner. Syncing the fork we just got with the original Spoon-Knife repository allows us to stay up-to-date by pulling changes or "upstream" right to our forked local folder.</p> 
+    <p> Go back to the original Spoon-Knife repository and copy the clone url at the top.</p>
+    <p>While we are still in our local fork folder go ahead and type:</p>
+
+    <div class="well well-sm">
+     <p> <kbd>git remote add upstream</kbd> paste the orignal repo url here</p>
+    </div>
+
+    <p>Remeber <kbd>git remote -v</kbd>? You can use that to check your origin and upstream, so it should look like:</p>
+
+    <br>
+
+    <img class="img-responsive" src="images/git_6.png" alt="git" width=" 75%"> 
+
+    <br>
+
+    <p> Go ahead and make changes, do what you want. You already know how to push the changes you make up to your repository on github. Have fun!</p>
+
+
+
+<br>
+<br>
+<br>
+</div> <!-- End Container -->
+
+<footer class="footer">
+     <div class="container">
+       <p class="text-muted">Geoffrey Lightbourn - 2015</p>
+       <p><a href="https://github.com/geofflightbourn">Fork Me On Github</a></p>
+     </div>
+   </footer>
+  
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,3 +1,7 @@
-Yes TEST!!! asdlkdjfa;lksdjfa;lksdjfa;skdjfa;skdjfa
-dsfaksdjf;akjdf;akjsdfkajsdf;kadf
-adfkladsfjkahdsflkjashdfljkh
+Github tutorial project. 
+
+EWT Final 
+
+Columbia College Chicago
+
+2015
