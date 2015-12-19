@@ -77,7 +77,15 @@
 
     <br>
 
-    <p> Go ahead and make changes, do what you want. You already know how to push the changes you make up to your repository on github. Have fun!</p>
+    <h4>Fetch and Push</h4>
+
+    <p>Now that we have forked a repo and its upstreamed, we have the ability to fetch and push. But whats the differance?</p>
+    <br>
+    <ul>
+    <p><kbd>git fetch</kbd> is used to retrieve new changes made by other people working on the repository. But It wont merge the changes into your own branches. Meaning that the work you have done will not be included. </p>
+    <p><kbd>git merge</kbd> will combine the changes you have made, with the changes of others. You would use this if you wanted to merge changes with a remote branch (somone esles work) with your own local branch. </p>
+    <p><kbd>git pull</kbd> is a combination between fetch and merge. It will fetch all the changes that others have made, and merge them with yours localy all in one go. You should always make sure your work is committed (the checkpoint to go back to) before you do this. When doing a pull, you may run into a conflict, but you are always able to do a <kbd>git merge --abort</kbd> if it can't be resolved. </p>
+    </ul>
 
 
 
